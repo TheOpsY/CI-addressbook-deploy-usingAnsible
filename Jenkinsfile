@@ -45,7 +45,7 @@ pipeline {
             steps {
                  
              
-               
+               sh "ssh-copy-id ansible@10.128.0.2"
                sh "ansible-playbook main.yml -i inventories/dev/hosts --user ansible --key-file ~/.ssh/id_rsa"
 
                
